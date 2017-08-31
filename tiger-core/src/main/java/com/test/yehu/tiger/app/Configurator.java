@@ -1,5 +1,9 @@
 package com.test.yehu.tiger.app;
 
+import com.joanzapata.iconify.IconFontDescriptor;
+import com.joanzapata.iconify.Iconify;
+
+import java.util.ArrayList;
 import java.util.WeakHashMap;
 
 /**
@@ -8,6 +12,7 @@ import java.util.WeakHashMap;
 
 public class Configurator {
     private static final WeakHashMap<String, Object> TIGER_CONFIGS = new WeakHashMap<>();
+    private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
 
     private Configurator() {
         TIGER_CONFIGS.put(ConfigType.CONFIG_READY.name(), false);
@@ -17,7 +22,7 @@ public class Configurator {
         return TIGER_CONFIGS;
     }
 
-    public final static Configurator getInstance() {
+    public static final Configurator getInstance() {
         return Holder.INSTANCE;
     }
 
@@ -27,6 +32,7 @@ public class Configurator {
     }
 
     public final void configure() {
+        initIcons();
         TIGER_CONFIGS.put(ConfigType.CONFIG_READY.name(), true);
     }
 
@@ -46,6 +52,19 @@ public class Configurator {
     public <T> T getConfiguration(Enum<ConfigType> key) {
         checkConfigurations();
         return (T) TIGER_CONFIGS.get(key);
+    }
+
+    private static void initIcons() {
+        if (ICONS.size() > 0) {
+            final Iconify.IconifyInitializer iconifyInitializer = Iconify.with(ICONS.get(0));
+            for (int i = 1; i < ICONS.size(); i++) {
+                iconifyInitializer.with(ICONS.get(i));
+            }
+        }
+    }
+    public final Configurator withIcon(IconFontDescriptor descriptor){
+        ICONS.add(descriptor);
+        return this;
     }
 
 }
