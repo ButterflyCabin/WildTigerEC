@@ -4,7 +4,7 @@ import com.joanzapata.iconify.Icon;
 import com.joanzapata.iconify.IconFontDescriptor;
 
 /**
- * Created by ButterflyCabin on 2017/9/1.
+ * Created by WildTiger on 2017/9/1.
  */
 
 public class FontTigerModule implements IconFontDescriptor {

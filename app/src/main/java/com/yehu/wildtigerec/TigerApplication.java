@@ -8,7 +8,7 @@ import com.test.yehu.tiger.app.Tiger;
 import com.test.yehu.tigerec.FontTigerModule;
 
 /**
- * Created by ButterflyCabin on 2017/8/31.
+ * Created by WildTiger on 2017/8/31.
  */
 
 public class TigerApplication extends Application {

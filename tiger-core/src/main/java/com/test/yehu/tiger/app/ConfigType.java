@@ -1,7 +1,7 @@
 package com.test.yehu.tiger.app;
 
 /**
- * Created by ButterflyCabin on 2017/8/31.
+ * Created by WildTiger on 2017/8/31.
  */
 
 public enum ConfigType {

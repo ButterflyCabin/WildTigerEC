@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.WeakHashMap;
 
 /**
- * Created by ButterflyCabin on 2017/8/31.
+ * Created by WildTiger on 2017/8/31.
  */
 
 public class Configurator {

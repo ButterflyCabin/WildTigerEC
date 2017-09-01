@@ -3,7 +3,7 @@ package com.test.yehu.tigerec;
 import com.joanzapata.iconify.Icon;
 
 /**
- * Created by ButterflyCabin on 2017/9/1.
+ * Created by WildTiger on 2017/9/1.
  */
 
 public enum FontTigerIcons implements Icon {
