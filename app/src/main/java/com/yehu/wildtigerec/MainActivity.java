@@ -1,13 +1,12 @@
 package com.yehu.wildtigerec;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.test.yehu.tiger.activities.PoxyActivity;
+import com.test.yehu.tiger.delegates.TigerDelegate;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends PoxyActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public TigerDelegate setRootDelegate() {
+        return new MainDelegate();
     }
 }

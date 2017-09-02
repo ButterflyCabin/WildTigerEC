@@ -15,7 +15,7 @@ import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
  */
 
 public abstract class BaseDelegate extends SwipeBackFragment {
-    private Unbinder unbinder = null;
+    private Unbinder unBinder = null;
 
     public abstract Object setLayout();
 
@@ -31,7 +31,7 @@ public abstract class BaseDelegate extends SwipeBackFragment {
             rootView = (View) setLayout();
         }
         if (null != rootView) {
-            unbinder = ButterKnife.bind(this, rootView);
+            unBinder = ButterKnife.bind(this, rootView);
             onBindView(savedInstanceState, rootView);
         }
         return rootView;
@@ -40,8 +40,8 @@ public abstract class BaseDelegate extends SwipeBackFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if(null != unbinder){
-            unbinder.unbind();
+        if(null != unBinder){
+            unBinder.unbind();
         }
     }
 }
